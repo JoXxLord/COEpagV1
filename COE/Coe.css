@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    background-image: url('CoeFondo2.png'); /* Reemplaza con la ruta correcta */
+    background-size: cover; /* Ajusta la imagen al tamaño de la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Hace que el fondo no se mueva */
+}
+
+html, body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1; /* Empuja el footer hacia abajo */
+}
+
+/* Estilos de la cabecera */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #13797c;
+    padding: 15px 20px; /* Se redujo el padding para evitar demasiado espacio */
+    color: white;
+}
+
+header, nav {
+    overflow: visible;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.header-text h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.header-text p {
+    font-size: 14px;
+    font-weight: bold; /* Negrita para el subtítulo */
+    color: white;
+}
+
+/* Menú de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block; /* Asegura que el transform funcione */
+    transition: all 0.2s ease-in-out; /* Aplica la transición a todas las propiedades */
+}
+
+nav ul li a:hover {
+    transform: translateY(-5px);
+}
+
+/* Íconos de redes sociales en la barra */
+.nav-social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-social-icons a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s;
+}
+
+.nav-social-icons a img:hover {
+    transform: scale(1.1);
+}
+
+#whatsapp-section {
+    display: flex;
+    justify-content: center;
+    margin: 150px 0;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03); /* Ligeramente más grande */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.whatsapp-container {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-size: 22px;
+    color: #13797c;
+    gap: 15px;
+    width: 80%;
+    max-width: 900px;
+    justify-content: center;
+    text-align: center;
+    animation: pulse 1.5s infinite ease-in-out; /* Agrega la animación */
+}
+.whatsapp-container img {
+    width: 80px; /* Aumenta el tamaño de los íconos */
+}
+
+.whatsapp-container h2 {
+    font-size: 28px;
+    align-items: center;
+}
+
+.whatsapp-container h3 {
+    font-size: 30px; /* Agranda el título */
+    font-weight: bold;
+}
+
+/* Ajuste del carrusel */
+/* Ajustes del carrusel */
+#carrusel, .carousel-container {
+    width: 100%;
+    overflow: hidden; /* Oculta las imágenes fuera de la vista */
+    position: relative;
+    border-bottom: 5px solid #13797c; /* Línea de separación */
+}
+
+.carousel-slide {
+    display: flex;
+    width: 100%; /* Ajuste dinámico */
+    height: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+.carousel-slide img {
+    flex: 1 0 auto; /* Hace que las imágenes ocupen el espacio correctamente */
+    width: 100%;
+    height: 700px; 
+    object-fit: cover; /* Ajusta la imagen sin dejar espacio extra */
+}
+/* Ajustes para la ubicación */
+/* Sección de Ubicación */
+
+#ubicacion {
+    margin-bottom: 50px;
+}
+.ubicacion-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.info {
+    max-width: 50%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+/* Agrandar títulos y mejorar estética */
+.info h2 {
+    font-size: 28px; /* Hace el título más grande y proporcional al mapa */
+    color: #13797c;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 20px; /* Agranda los párrafos */
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.mapa iframe {
+    width: 600px;
+    height: 400px;
+    border-radius: 15px;
+    border: none;
+    display: block;
+    margin: auto;
+}
+
+/* Botón de WhatsApp */
+#whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #12d459;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+#whatsapp-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+#whatsapp-number {
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#whatsapp-btn:hover #whatsapp-number {
+    display: inline;
+    opacity: 1;
+}
+
+footer {
+    margin-top: 80px;
+}
+
+/* Pie de página mejorado */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #13797c;
+    color: white;
+    position: relative;
+}
+/* Sección izquierda con "Contacto" y "Sobre Nosotros" en línea */
+.footer-left {
+    display: flex;
+    gap: 40px; /* Espacio entre Contacto y Sobre Nosotros */
+    text-align: left;
+}
+
+.footer-left div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Logo centrado en el pie de página */
+.footer-logo {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.footer-logo img {
+    height: 60px; /* Aumentado el tamaño del logo */
+}
+
+.footer-logo p {
+    font-size: 14px;
+    font-weight: bold;
+}
+.footer-logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contacts, .about-us {
+    text-align: left;
+}
+
+.about-us a {
+    display:block;
+    justify-content: left;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 5px
+    
+}
+
+.about-us a:hover {
+    text-decoration: underline;
+}
+
+
+/* Copyright en la esquina inferior izquierda */
+.footer-copyright {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+#reseñas {
+    margin: 80px auto 50px auto; /* Reducido el margen para mejor ajuste */
+    text-align: center;
+}
+
+.titulo-reseñas {
+    font-size: 40px; /* Tamaño ajustado */
+    color: #dda201;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.reseñas-container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 900px; /* Limita el ancho para mejor visibilidad */
+    margin: auto;
+    position: relative;
+    padding: 20px 0;
+}
+
+.reseñas-carrusel {
+    display: flex;
+    flex-wrap: nowrap;
+    width: calc(400px * 3); /* 5 reseñas + 1 clon */
+}
+.reseña {
+    width: 400px; 
+    height: 170px;
+    flex: 0 0 auto;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    opacity: 1; /* Eliminamos la opacidad variable */
+    transform: scale(1); /* Eliminamos los efectos de escala */
+}
